@@ -1,0 +1,49 @@
+
+
+
+SIZE = 51,23
+
+TYPE = SINGLE
+
+COLOUR = White,Cyan
+
+INPUT = Lightcyan,Blue
+
+
+TEXT = @3,1;  "B387 by Mik27."
+TEXT = @20,2; "Motion's values . . ."
+TEXT = @3,4;  "Counter        :"
+TEXT = @3,5;  "SaveFlag       :"
+TEXT = @3,6;  "ZoomInc        :"
+TEXT = @3,7;  "XminInc        :"
+TEXT = @3,8;  "XmaxInc        :"
+TEXT = @3,9;  "YminInc        :"
+TEXT = @3,10;  "YmaxInc        :"
+TEXT = @3,11;  "AvalInc        :"
+TEXT = @3,12;  "BvalInc        :"
+TEXT = @3,13;  "CvalInc        :"
+TEXT = @3,14;  "Add Real Cost  :"
+TEXT = @3,15;  "Add Imag Cost  :"
+TEXT = @3,16;  "Mul Real Cost  :"
+TEXT = @3,17;  "Mul Imag Cost  :"
+TEXT = @3,18;  "EpsilonInc     :"
+TEXT = @3,20;  "Function       :"
+
+FIELD = @20,4 ;NAME=Cou ;Numeric (6)
+FIELD = @20,5 ;NAME=Sv ;Logical (Full)
+FIELD = @20,6 ;NAME=Zm ;Numeric (27,15)
+FIELD = @20,7 ;NAME=Xmn ;Numeric (27,15)
+FIELD = @20,8 ;NAME=Xmx ;Numeric (27,15)
+FIELD = @20,9 ;NAME=Ymn ;Numeric (27,15)
+FIELD = @20,10;NAME=Ymx ;Numeric (27,15)
+FIELD = @20,11 ;NAME=Avl ;Numeric (27,15)
+FIELD = @20,12 ;NAME=Bvl ;Numeric (27,15)
+FIELD = @20,13 ;NAME=Cvl ;Numeric (27,15)
+FIELD = @20,14 ;NAME=AR  ;Numeric (27,15)
+FIELD = @20,15 ;NAME=AI  ;Numeric (27,15)
+FIELD = @20,16 ;NAME=MR ;Numeric (27,15)
+FIELD = @20,17 ;NAME=MI ;Numeric (27,15)
+FIELD = @20,18 ;NAME=Eps ;Numeric (27,15)
+FIELD = @20,20 ;NAME=fn ;String (15)
+
+

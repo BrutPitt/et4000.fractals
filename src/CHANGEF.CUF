@@ -1,0 +1,84 @@
+!----------------------------------------------------------===================
+! B387 by Mik27.                                   |
+!                  Fractal's Values . . .          |
+!                                                  |
+!                                                  |
+! Xmin           : ______________________________  |
+! Xmax           : ______________________________  |
+! Ymin           : ______________________________  |
+! Ymax           : ______________________________  |
+! Add Real Cost  : ______________________________  |
+! Add Imag Cost  : ______________________________  |
+! Mul Real Cost  : ______________________________  |
+! Mul Imag Cost  : ______________________________  |
+! Epsilon        : ______________________________  |
+! Iteraz         : ___________
+! Bailout        : _____     Conv. (RI,R,I) : ___  |
+! Palette        : _____________                   |
+! DataFile       : _____________                   |
+! Picture        : ______________________________  |
+!                                                  |
+!                                                  |
+!                                                  |
+!                                                  |
+!---------------------------------------------------
+!
+!=============================================================================
+
+
+
+SIZE = 54,24
+
+TYPE = SINGLE
+
+COLOUR = Blue,Cyan
+
+INPUT = White,Blue
+
+
+TEXT = @3,1;  "B387 by Mik27."
+TEXT = @20,2; "Fractal's values . . ."
+TEXT = @3,4;  "Xmin           :"
+TEXT = @3,5;  "Xmax           :"
+TEXT = @3,6;  "Ymin           :"
+TEXT = @3,7;  "Ymax           :"
+TEXT = @3,8;  "Aval           :"
+TEXT = @3,9;  "Bval           :"
+TEXT = @3,10;  "Cval           :"
+TEXT = @3,11;  "Dval           :"
+TEXT = @3,12;  "Add Real Cost  :"
+TEXT = @3,13;  "Add Imag Cost  :"
+TEXT = @3,14;  "Mul Real Cost  :"
+TEXT = @3,15;  "Mul Imag Cost  :"
+TEXT = @3,16;  "Epsilon        :"
+TEXT = @3,17;  "Iteration      :"
+TEXT = @31,18; "Conv. (RI,R,I) :"
+TEXT = @3,18;  "Bailout        :"
+TEXT = @3,19;  "Palette        :"
+TEXT = @3,20;  "DataFile       :"
+TEXT = @3,21;  "Picture        :"
+TEXT = @3,22;  "Function       :"
+
+
+FIELD = @20,4 ;NAME=Xmn ;Numeric (30,16)
+FIELD = @20,5 ;NAME=Xmx ;Numeric (30,16)
+FIELD = @20,6 ;NAME=Ymn ;Numeric (30,16)
+FIELD = @20,7 ;NAME=Ymx ;Numeric (30,16)
+FIELD = @20,8 ;NAME=Avl ;Numeric (30,16)
+FIELD = @20,9 ;NAME=Bvl ;Numeric (30,16)
+FIELD = @20,10 ;NAME=Cvl ;Numeric (30,16)
+FIELD = @20,11 ;NAME=Dvl ;Numeric (30,16)
+FIELD = @20,12 ;NAME=AR  ;Numeric (30,16)
+FIELD = @20,13 ;NAME=AI  ;Numeric (30,16)
+FIELD = @20,14 ;NAME=MR ;Numeric (30,16)
+FIELD = @20,15 ;NAME=MI ;Numeric (30,16)
+FIELD = @20,16 ;NAME=Eps ;Numeric (30,16)
+FIELD = @20,17 ;NAME=Ite ;Numeric (11,1)
+FIELD = @20,18 ;NAME=Bai ;Numeric (5)
+FIELD = @48,18 ;NAME=Cv ;String (2)
+FIELD = @20,19 ;NAME=Pal ;String (13)
+FIELD = @20,20 ;NAME=DF ;String (13)
+FIELD = @20,21 ;NAME=Pic ;String (30)
+FIELD = @20,22 ;NAME=fn ;String (15)
+
+

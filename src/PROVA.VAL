@@ -1,0 +1,24 @@
+
+;B387.exe by Michele Morrone.
+
+;nType     JuliaCos
+
+
+Xmin                          -0.1
+Xmax                          0.1
+Ymin                          -0.1
+Ymax                          0.1
+RealCost                      0.000000000000000000
+ImagCost                      0.000000000000000000
+KostanteRe                    2.964500000000000140
+KostanteIm                    0.000000000000000000
+Epsilon                       0.001000000000000000
+Bailout                       4
+Interpolazione                1
+N.Iterazioni                  100000
+ConvergenzaSu                 ri
+Ris.Video                     320
+Palette                       rainbow.gin
+SavePicture                   ll
+
+End

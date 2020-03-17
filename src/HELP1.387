@@ -1,0 +1,42 @@
+B387 - by Mik27 alias Michele Morrone - Bari 7-2-1991
+
+Tasti usati:
+
+F1      Help.
+{1..8} 	Livello di interpolazione punti (1=No interpolazione).
+F5      Modalita' 320x200x256.   Vga & Mcga.
+F6      Modalita' 640x480x256.   Tseng3000 or Tseng4000 mode.
+F7      Modalita' 800x600x256.   Tseng3000 or Tseng4000 & Multisync mode.
+F8      Modalita' 1024x768x256.  Tseng4000 1Mb & Multisync mode.
+Tab     Elenco parametri.
+L       Carica ad ogni pressione successiva i un tasto una delle palette
+	contenute sul disco.Esc per ritornare al modo grafico.
+S	Salva il file in BitMap in modo seguente :
+	da Offset 0    a offset 255   -> Dati del programma b387.
+	da Offset 256  a offset 1024  -> Triplette RGB per la palette.
+	da offset 1024 alla fine      -> Bitmap 1 byte per pixel.
+F10     Visualizza la palette corrente.Un tasto per tornare in modo
+	grafico.
+R	Carica un file salvato precedentemente con B387.
+Enter   Zoom usabile con Mouse o con tastiera:
+	Mouse :
+	    Tasto destro   : ingrandisce o rimpicciolisce il box.
+	    Tasto sinistro : Go zoom.
+	    No tasti       : Muove il box di zoom.
+	Tastiera :
+	    PgUp  : Ingrandisce il box.
+	    PgDn  : Rimpicciolisce il box.
+	    +     : Aumenta lo step di spostamento o ingrandimento box.
+	    -     : Diminuisce lo step di spostamento o ingrandimento box.
+	    Freccie : Spostamento box.
+C       Cambio parametri di esplorazione.
+	    Enter : per confermare il valore.
+	    Esc   : per passare direttamente alla grafica.
++       Aumenta di 8 unita' il numero di iterazioni.
+-       Diminuisce di 8 unita' il numero di iterazioni.
+W	Scrive su di un file i parametri dell'esplorazione,successivamente
+	richiamabili da programma. (DataFile)
+Esc	Uscita dal programma.
+
+
+Premi un tasto per continuare,ESC per tornare a B387 . . .

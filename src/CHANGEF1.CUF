@@ -1,0 +1,23 @@
+SIZE = 60,30
+
+TYPE = SINGLE
+
+COLOUR = White,Cyan
+
+INPUT = White,Blue
+
+TEXT = @13,2, "Change value for selected fractal"
+
+FIELD = @2,4 ;NAME=Xmin ;Numeric (10,18)
+FIELD = @2,5 ;NAME=Xmax ;Numeric (10,18)
+FIELD = @2,6 ;NAME=Ymin ;Numeric (10,18)
+FIELD = @2,7 ;NAME=Ymax ;Numeric (10,18)
+FIELD = @2,8 ;NAME=AddReal ;Numeric (10,18)
+FIELD = @2,9 ;NAME=AddImag ;Numeric (10,18)
+FIELD = @2,10 ;NAME=MulReal ;Numeric (10,18)
+FIELD = @2,11 ;NAME=MulImag ;Numeric (10,18)
+FIELD = @2,12 ;NAME=Epsilon ;Numeric (10,18)
+FIELD = @2,13 ;NAME=Bailout ;Numeric (5)
+FIELD = @2,14 ;NAME=Iterate ;Numeric (12)
+FIELD = @2,15 ;NAME=ResVideo ;Numeric (4)
+

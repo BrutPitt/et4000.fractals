@@ -1,0 +1,16 @@
+;Type                          Hopalong
+
+Xmin                          -100
+Xmax                          100
+Ymin                          -100
+Ymax                          100
+Aval                          48
+Bval                          2.7
+Cval                          80
+N.Iterazioni                  10000000
+Ris.Video                     640
+Palette                       asteria.gin
+Savepicture                   Hopalong                       Nessuna estenzione!!!!!
+
+End
+

@@ -1,0 +1,21 @@
+;Type                          Biomorph
+
+Xmin                          -.65
+Xmax                          .65
+Ymin                          -1.049
+Ymax                          -.032
+RealCost                      .5
+ImagCost                      0
+KostanteRe                    1
+KostanteIm                    1
+Epsilon                       25.6                           Epsilon * Iterazioni = colore
+Bailout                       4
+ConvergenzaSu                 RI                             R per Real,I per Imaginary,RI per Real & Imaginary
+N.Iterazioni                  9
+Ris.Video                     320
+Interpolazione                2
+Palette                       redo.gin
+SavePicture                   Biom                           Nessuna estenzione!!!!!
+
+End
+

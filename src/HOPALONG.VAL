@@ -1,0 +1,28 @@
+;---------------------------------------------------------------------------
+;  Alcuni valori interessanti. . .
+;
+;  A = 3.14     B = .3    C = .3     Zoom = .1
+;    = 76         = 27      = 888         = .1
+;    = 32         = 19      = 900
+;    = 64         = 3       = 70
+;    = 48         = 2.7     = 80
+;    = 68         = 18      = 3210
+;    = -200       = .1      = -80
+;    = -1000      = .1      = 10
+
+;Type                          Hopalong
+
+Xmin                          -100
+Xmax                          100
+Ymin                          -100
+Ymax                          100
+Aval                          3.14
+Bval                          .3
+Cval                          .3
+N.Iterazioni                  100000
+Ris.Video                     320
+Palette                       asteria.gin
+Savepicture                   Hopalong                       Nessuna estenzione!!!!!
+
+End
+

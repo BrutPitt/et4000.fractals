@@ -1,0 +1,182 @@
+﻿<!doctypehtml><html lang=en-us><head><meta charset=utf-8><meta content="text/html; charset=utf-8"http-equiv=Content-Type><meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"name=viewport><title>wglChAoS.P / wglChAoSP</title><style>.emscripten{position:absolute;top:0;left:0;margin:0;border:0;width:100%;height:100%;overflow:hidden;display:block;image-rendering:optimizeSpeed;image-rendering:-moz-crisp-edges;image-rendering:-o-crisp-edges;image-rendering:-webkit-optimize-contrast;image-rendering:optimize-contrast;image-rendering:crisp-edges;image-rendering:pixelated;-ms-interpolation-mode:nearest-neighbor}textarea.emscripten{font-family:monospace;width:80%}div.emscripten{text-align:center;position:relative;z-index:100000;height:10%}canvas.emscripten{border:0 none;background-color:#000}.spinner{position:relative;z-index:100000;height:27px;width:27px;margin:0 auto;-webkit-animation:rotation .27s linear infinite;-moz-animation:rotation .27s linear infinite;-o-animation:rotation .27s linear infinite;animation:rotation .27s linear infinite;border-left:7px solid #0096f0;border-right:7px solid #0096f0;border-bottom:7px solid #0096f0;border-top:7px solid #0064c8;border-radius:100%;background-color:rgba(0,0,0,0)}@-webkit-keyframes rotation{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(360deg)}}@-moz-keyframes rotation{from{-moz-transform:rotate(0)}to{-moz-transform:rotate(360deg)}}@-o-keyframes rotation{from{-o-transform:rotate(0)}to{-o-transform:rotate(360deg)}}@keyframes rotation{from{transform:rotate(0)}to{transform:rotate(360deg)}}</style></head><body bgcolor=#001c2c><figure id=spinner style=overflow:visible><div class=spinner></div><center style=margin-top:.5em;color:#99c8ff><strong>wglChAoS.P / wglChAoSP</strong></center></figure><div class=emscripten id=status style=color:#99c8ff>Wait...</div><div class=emscripten><progress hidden id=progress max=100 value=0></progress></div><div class=emscripten_border><canvas class=emscripten id=canvas oncontextmenu=event.preventDefault()></canvas></div><script>var statusElement=document.getElementById("status"),progressElement=document.getElementById("progress"),spinnerElement=document.getElementById("spinner"),url_string=window.location.href,url=new URL(url_string),fFile=url.searchParams.get("file"),fType=url.searchParams.get("type"),Module={arguments:[null==fFile?"JuliaC.val":fFile,null==fType?"J4":fType],preRun:[],postRun:[],print:function(e){e=Array.prototype.slice.call(arguments).join(" "),console.log(e)},printErr:function(e){e=Array.prototype.slice.call(arguments).join(" "),console.error(e)},canvas:document.getElementById("canvas"),setStatus:function(e){if(Module.setStatus.last||(Module.setStatus.last={time:Date.now(),text:""}),e!==Module.setStatus.text){var t=e.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/),n=Date.now();t&&n-Date.now()<30||(t?(e=t[1],progressElement.value=100*parseInt(t[2]),progressElement.max=100*parseInt(t[4]),progressElement.hidden=!1,spinnerElement.hidden=!1):(progressElement.value=null,progressElement.max=null,progressElement.hidden=!0,e||(spinnerElement.hidden=!0,statusElement.hidden=!0,progressElement.hidden=!0,statusElement.style.zIndex="0",progressElement.style.zIndex="0",spinnerElement.style.zIndex="0")),statusElement.innerHTML=e)}},totalDependencies:0,monitorRunDependencies:function(e){this.totalDependencies=Math.max(this.totalDependencies,e),Module.setStatus(e?"Preparing... ("+(this.totalDependencies-e)+"/"+this.totalDependencies+")":"All downloads complete.")}};window.onerror=function(){console.log("onerror: "+event)}</script><script async src=dosbox.js></script></body></html><script type="text/javascript">
+var Module = typeof Module !== 'undefined' ? Module : {};
+
+if (!Module.expectedDataFileDownloads) {
+  Module.expectedDataFileDownloads = 0;
+  Module.finishedDataFileDownloads = 0;
+}
+Module.expectedDataFileDownloads++;
+(function() {
+ var loadPackage = function(metadata) {
+
+    var PACKAGE_PATH;
+    if (typeof window === 'object') {
+      PACKAGE_PATH = window['encodeURIComponent'](window.location.pathname.toString().substring(0, window.location.pathname.toString().lastIndexOf('/')) + '/');
+    } else if (typeof location !== 'undefined') {
+      // worker
+      PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
+    } else {
+      throw 'using preloaded data can only be done on a web page or in a web worker';
+    }
+    var PACKAGE_NAME = '/Windows/em-dosbox/src/b387.data';
+    var REMOTE_PACKAGE_BASE = 'b387.data';
+    if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
+      Module['locateFile'] = Module['locateFilePackage'];
+      err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
+    }
+    var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
+  
+    var REMOTE_PACKAGE_SIZE = metadata.remote_package_size;
+    var PACKAGE_UUID = metadata.package_uuid;
+  
+    function fetchRemotePackage(packageName, packageSize, callback, errback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', packageName, true);
+      xhr.responseType = 'arraybuffer';
+      xhr.onprogress = function(event) {
+        var url = packageName;
+        var size = packageSize;
+        if (event.total) size = event.total;
+        if (event.loaded) {
+          if (!xhr.addedTotal) {
+            xhr.addedTotal = true;
+            if (!Module.dataFileDownloads) Module.dataFileDownloads = {};
+            Module.dataFileDownloads[url] = {
+              loaded: event.loaded,
+              total: size
+            };
+          } else {
+            Module.dataFileDownloads[url].loaded = event.loaded;
+          }
+          var total = 0;
+          var loaded = 0;
+          var num = 0;
+          for (var download in Module.dataFileDownloads) {
+          var data = Module.dataFileDownloads[download];
+            total += data.total;
+            loaded += data.loaded;
+            num++;
+          }
+          total = Math.ceil(total * Module.expectedDataFileDownloads/num);
+          if (Module['setStatus']) Module['setStatus']('Downloading data... (' + loaded + '/' + total + ')');
+        } else if (!Module.dataFileDownloads) {
+          if (Module['setStatus']) Module['setStatus']('Downloading data...');
+        }
+      };
+      xhr.onerror = function(event) {
+        throw new Error("NetworkError for: " + packageName);
+      }
+      xhr.onload = function(event) {
+        if (xhr.status == 200 || xhr.status == 304 || xhr.status == 206 || (xhr.status == 0 && xhr.response)) { // file URLs can return 0
+          var packageData = xhr.response;
+          callback(packageData);
+        } else {
+          throw new Error(xhr.statusText + " : " + xhr.responseURL);
+        }
+      };
+      xhr.send(null);
+    };
+
+    function handleError(error) {
+      console.error('package error:', error);
+    };
+  
+      var fetchedCallback = null;
+      var fetched = Module['getPreloadedPackage'] ? Module['getPreloadedPackage'](REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE) : null;
+
+      if (!fetched) fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE, function(data) {
+        if (fetchedCallback) {
+          fetchedCallback(data);
+          fetchedCallback = null;
+        } else {
+          fetched = data;
+        }
+      }, handleError);
+    
+  function runWithFS() {
+
+    function assert(check, msg) {
+      if (!check) throw msg + new Error().stack;
+    }
+
+    function DataRequest(start, end, audio) {
+      this.start = start;
+      this.end = end;
+      this.audio = audio;
+    }
+    DataRequest.prototype = {
+      requests: {},
+      open: function(mode, name) {
+        this.name = name;
+        this.requests[name] = this;
+        Module['addRunDependency']('fp ' + this.name);
+      },
+      send: function() {},
+      onload: function() {
+        var byteArray = this.byteArray.subarray(this.start, this.end);
+        this.finish(byteArray);
+      },
+      finish: function(byteArray) {
+        var that = this;
+
+        Module['FS_createDataFile'](this.name, null, byteArray, true, true, true); // canOwn this data in the filesystem, it is a slide into the heap that will never change
+        Module['removeRunDependency']('fp ' + that.name);
+
+        this.requests[this.name] = null;
+      }
+    };
+
+        var files = metadata.files;
+        for (var i = 0; i < files.length; ++i) {
+          new DataRequest(files[i].start, files[i].end, files[i].audio).open('GET', files[i].filename);
+        }
+
+  
+    function processPackageData(arrayBuffer) {
+      Module.finishedDataFileDownloads++;
+      assert(arrayBuffer, 'Loading data file failed.');
+      assert(arrayBuffer instanceof ArrayBuffer, 'bad input to processPackageData');
+      var byteArray = new Uint8Array(arrayBuffer);
+      var curr;
+      
+        // Reuse the bytearray from the XHR as the source for file reads.
+        DataRequest.prototype.byteArray = byteArray;
+  
+          var files = metadata.files;
+          for (var i = 0; i < files.length; ++i) {
+            DataRequest.prototype.requests[files[i].filename].onload();
+          }
+              Module['removeRunDependency']('datafile_/Windows/em-dosbox/src/b387.data');
+
+    };
+    Module['addRunDependency']('datafile_/Windows/em-dosbox/src/b387.data');
+  
+    if (!Module.preloadResults) Module.preloadResults = {};
+  
+      Module.preloadResults[PACKAGE_NAME] = {fromCache: false};
+      if (fetched) {
+        processPackageData(fetched);
+        fetched = null;
+      } else {
+        fetchedCallback = processPackageData;
+      }
+    
+  }
+  if (Module['calledRun']) {
+    runWithFS();
+  } else {
+    if (!Module['preRun']) Module['preRun'] = [];
+    Module["preRun"].push(runWithFS); // FS is not initialized yet, wait for it
+  }
+
+ }
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 1092, "filename": "/0.VAL"}, {"start": 1092, "audio": 0, "end": 2036, "filename": "/12A_010.VAL"}, {"start": 2036, "audio": 0, "end": 2980, "filename": "/12A_011.VAL"}, {"start": 2980, "audio": 0, "end": 3922, "filename": "/12A_09.VAL"}, {"start": 3922, "audio": 0, "end": 4710, "filename": "/16-STAND.GIN"}, {"start": 4710, "audio": 0, "end": 5652, "filename": "/1B_01.VAL"}, {"start": 5652, "audio": 0, "end": 6595, "filename": "/1B_02.VAL"}, {"start": 6595, "audio": 0, "end": 7536, "filename": "/1B_04.VAL"}, {"start": 7536, "audio": 0, "end": 8477, "filename": "/6A_00.VAL"}, {"start": 8477, "audio": 0, "end": 9416, "filename": "/8A_05.VAL"}, {"start": 9416, "audio": 0, "end": 10355, "filename": "/8A_06.VAL"}, {"start": 10355, "audio": 0, "end": 11294, "filename": "/8A_07.VAL"}, {"start": 11294, "audio": 0, "end": 12082, "filename": "/ASTERI-E.GIN"}, {"start": 12082, "audio": 0, "end": 222722, "filename": "/B387.EXE"}, {"start": 222722, "audio": 0, "end": 223668, "filename": "/BAR0.VAL"}, {"start": 223668, "audio": 0, "end": 224456, "filename": "/BASEN-32.GIN"}, {"start": 224456, "audio": 0, "end": 225244, "filename": "/BGRY.GIN"}, {"start": 225244, "audio": 0, "end": 226032, "filename": "/BGRY_HI.GIN"}, {"start": 226032, "audio": 0, "end": 226827, "filename": "/BIOMORPH.VAL"}, {"start": 226827, "audio": 0, "end": 227766, "filename": "/BRA_00.VAL"}, {"start": 227766, "audio": 0, "end": 228708, "filename": "/BRA_01.VAL"}, {"start": 228708, "audio": 0, "end": 229649, "filename": "/BRA_010.VAL"}, {"start": 229649, "audio": 0, "end": 230587, "filename": "/BRA_011.VAL"}, {"start": 230587, "audio": 0, "end": 231529, "filename": "/BRA_012.VAL"}, {"start": 231529, "audio": 0, "end": 232469, "filename": "/BRA_013.VAL"}, {"start": 232469, "audio": 0, "end": 233409, "filename": "/BRA_014.VAL"}, {"start": 233409, "audio": 0, "end": 234347, "filename": "/BRA_015.VAL"}, {"start": 234347, "audio": 0, "end": 235289, "filename": "/BRA_016.VAL"}, {"start": 235289, "audio": 0, "end": 236227, "filename": "/BRA_02.VAL"}, {"start": 236227, "audio": 0, "end": 237168, "filename": "/BRA_03.VAL"}, {"start": 237168, "audio": 0, "end": 238110, "filename": "/BRA_04.VAL"}, {"start": 238110, "audio": 0, "end": 239051, "filename": "/BRA_05.VAL"}, {"start": 239051, "audio": 0, "end": 239992, "filename": "/BRA_06.VAL"}, {"start": 239992, "audio": 0, "end": 240933, "filename": "/BRA_07.VAL"}, {"start": 240933, "audio": 0, "end": 241876, "filename": "/BRA_08.VAL"}, {"start": 241876, "audio": 0, "end": 242817, "filename": "/BRA_09.VAL"}, {"start": 242817, "audio": 0, "end": 243761, "filename": "/BR_00.VAL"}, {"start": 243761, "audio": 0, "end": 244549, "filename": "/CERV.GIN"}, {"start": 244549, "audio": 0, "end": 248005, "filename": "/CHANGEF.CFO"}, {"start": 248005, "audio": 0, "end": 251069, "filename": "/CHANGEF.CUF"}, {"start": 251069, "audio": 0, "end": 251725, "filename": "/CHANGEF1.CUF"}, {"start": 251725, "audio": 0, "end": 254772, "filename": "/CHANGEM.CFO"}, {"start": 254772, "audio": 0, "end": 257620, "filename": "/CHANGEM.CUF"}, {"start": 257620, "audio": 0, "end": 257674, "filename": "/CHKLIST.CPS"}, {"start": 257674, "audio": 0, "end": 258462, "filename": "/CMYW.GIN"}, {"start": 258462, "audio": 0, "end": 269405, "filename": "/dosbox.conf"}, {"start": 269405, "audio": 0, "end": 270193, "filename": "/EQUAL.GIN"}, {"start": 270193, "audio": 0, "end": 270981, "filename": "/8-STAND.GIN"}, {"start": 270981, "audio": 0, "end": 271769, "filename": "/ASTERIA.GIN"}, {"start": 271769, "audio": 0, "end": 272557, "filename": "/BMCW.GIN"}, {"start": 272557, "audio": 0, "end": 273345, "filename": "/FUBLGRYE.GIN"}, {"start": 273345, "audio": 0, "end": 275163, "filename": "/HELP1.387"}, {"start": 275163, "audio": 0, "end": 275951, "filename": "/ISOLA.GIN"}, {"start": 275951, "audio": 0, "end": 276688, "filename": "/MANDEL.VAL"}, {"start": 276688, "audio": 0, "end": 277476, "filename": "/MONOCROM.GIN"}, {"start": 277476, "audio": 0, "end": 278264, "filename": "/PRISM.GIN"}, {"start": 278264, "audio": 0, "end": 279052, "filename": "/RAINBOW3.GIN"}, {"start": 279052, "audio": 0, "end": 279840, "filename": "/FUBLYEWH.GIN"}, {"start": 279840, "audio": 0, "end": 280628, "filename": "/GCYW.GIN"}, {"start": 280628, "audio": 0, "end": 281521, "filename": "/HENON.VAL"}, {"start": 281521, "audio": 0, "end": 282908, "filename": "/HKEYHLP.CUF"}, {"start": 282908, "audio": 0, "end": 283866, "filename": "/HOP0.VAL"}, {"start": 283866, "audio": 0, "end": 284826, "filename": "/HOP1.VAL"}, {"start": 284826, "audio": 0, "end": 285783, "filename": "/HOP10.VAL"}, {"start": 285783, "audio": 0, "end": 286742, "filename": "/HOP2.VAL"}, {"start": 286742, "audio": 0, "end": 287689, "filename": "/HOP3.VAL"}, {"start": 287689, "audio": 0, "end": 288656, "filename": "/HOP4.VAL"}, {"start": 288656, "audio": 0, "end": 289625, "filename": "/HOP5.VAL"}, {"start": 289625, "audio": 0, "end": 290580, "filename": "/HOP6.VAL"}, {"start": 290580, "audio": 0, "end": 291537, "filename": "/HOP7.VAL"}, {"start": 291537, "audio": 0, "end": 292489, "filename": "/HOP8.VAL"}, {"start": 292489, "audio": 0, "end": 293447, "filename": "/HOP9.VAL"}, {"start": 293447, "audio": 0, "end": 294369, "filename": "/HOPALONG.VAL"}, {"start": 294369, "audio": 0, "end": 294869, "filename": "/HOPCOS.VAL"}, {"start": 294869, "audio": 0, "end": 295825, "filename": "/HOPS0.VAL"}, {"start": 295825, "audio": 0, "end": 296781, "filename": "/HOPS1.VAL"}, {"start": 296781, "audio": 0, "end": 297737, "filename": "/HOPS2.VAL"}, {"start": 297737, "audio": 0, "end": 298693, "filename": "/HOPS3.VAL"}, {"start": 298693, "audio": 0, "end": 299193, "filename": "/HOPSICO.VAL"}, {"start": 299193, "audio": 0, "end": 299693, "filename": "/HOPSIN.VAL"}, {"start": 299693, "audio": 0, "end": 300193, "filename": "/HOPSQRT.VAL"}, {"start": 300193, "audio": 0, "end": 301134, "filename": "/JU0.VAL"}, {"start": 301134, "audio": 0, "end": 302075, "filename": "/JU1.VAL"}, {"start": 302075, "audio": 0, "end": 303015, "filename": "/JU2.VAL"}, {"start": 303015, "audio": 0, "end": 303954, "filename": "/JU3.VAL"}, {"start": 303954, "audio": 0, "end": 304895, "filename": "/JU4.VAL"}, {"start": 304895, "audio": 0, "end": 305838, "filename": "/JU5.VAL"}, {"start": 305838, "audio": 0, "end": 306595, "filename": "/JUC000.VAL"}, {"start": 306595, "audio": 0, "end": 307343, "filename": "/JULIA.VAL"}, {"start": 307343, "audio": 0, "end": 307366, "filename": "/JuliaC.bat"}, {"start": 307366, "audio": 0, "end": 308121, "filename": "/JULIAC.VAL"}, {"start": 308121, "audio": 0, "end": 308865, "filename": "/JULIAE.VAL"}, {"start": 308865, "audio": 0, "end": 309613, "filename": "/JULIAEP.VAL"}, {"start": 309613, "audio": 0, "end": 310357, "filename": "/JULIAS.VAL"}, {"start": 310357, "audio": 0, "end": 311295, "filename": "/KJ0.VAL"}, {"start": 311295, "audio": 0, "end": 312228, "filename": "/L0.VAL"}, {"start": 312228, "audio": 0, "end": 313174, "filename": "/LISS0.VAL"}, {"start": 313174, "audio": 0, "end": 318569, "filename": "/LISTB387.VAL"}, {"start": 318569, "audio": 0, "end": 319502, "filename": "/LLL0.VAL"}, {"start": 319502, "audio": 0, "end": 320435, "filename": "/LY0.VAL"}, {"start": 320435, "audio": 0, "end": 321367, "filename": "/LY1.VAL"}, {"start": 321367, "audio": 0, "end": 322301, "filename": "/LY2.VAL"}, {"start": 322301, "audio": 0, "end": 323280, "filename": "/LYAP0.VAL"}, {"start": 323280, "audio": 0, "end": 324213, "filename": "/LYAP00.VAL"}, {"start": 324213, "audio": 0, "end": 325001, "filename": "/LYAPUN_R.GIN"}, {"start": 325001, "audio": 0, "end": 325789, "filename": "/LYAP_GRE.GIN"}, {"start": 325789, "audio": 0, "end": 326573, "filename": "/MA0.VAL"}, {"start": 326573, "audio": 0, "end": 327357, "filename": "/MA1.VAL"}, {"start": 327357, "audio": 0, "end": 328143, "filename": "/MA16.VAL"}, {"start": 328143, "audio": 0, "end": 328927, "filename": "/MA2.VAL"}, {"start": 328927, "audio": 0, "end": 329711, "filename": "/MA3.VAL"}, {"start": 329711, "audio": 0, "end": 330495, "filename": "/MA4.VAL"}, {"start": 330495, "audio": 0, "end": 331233, "filename": "/MAND1.VAL"}, {"start": 331233, "audio": 0, "end": 331256, "filename": "/Mandel.bat"}, {"start": 331256, "audio": 0, "end": 331985, "filename": "/MANDELC.VAL"}, {"start": 331985, "audio": 0, "end": 332714, "filename": "/MANDELE.VAL"}, {"start": 332714, "audio": 0, "end": 333451, "filename": "/MANDELEP.VAL"}, {"start": 333451, "audio": 0, "end": 334180, "filename": "/MANDELS.VAL"}, {"start": 334180, "audio": 0, "end": 335072, "filename": "/MARTIN.VAL"}, {"start": 335072, "audio": 0, "end": 335861, "filename": "/ME0Z0.VAL"}, {"start": 335861, "audio": 0, "end": 336648, "filename": "/ME1Z0.VAL"}, {"start": 336648, "audio": 0, "end": 337436, "filename": "/METALLIC.GIN"}, {"start": 337436, "audio": 0, "end": 338374, "filename": "/MM0.VAL"}, {"start": 338374, "audio": 0, "end": 339316, "filename": "/MMM0.VAL"}, {"start": 339316, "audio": 0, "end": 340104, "filename": "/MONTAIN.GIN"}, {"start": 340104, "audio": 0, "end": 341045, "filename": "/MY3.VAL"}, {"start": 341045, "audio": 0, "end": 341987, "filename": "/MYX0.VAL"}, {"start": 341987, "audio": 0, "end": 342775, "filename": "/PASTELS.GIN"}, {"start": 342775, "audio": 0, "end": 343563, "filename": "/PBSTAND.GIN"}, {"start": 343563, "audio": 0, "end": 344340, "filename": "/PLANKTON.VAL"}, {"start": 344340, "audio": 0, "end": 345181, "filename": "/POPCORN.VAL"}, {"start": 345181, "audio": 0, "end": 345898, "filename": "/PROVA.VAL"}, {"start": 345898, "audio": 0, "end": 346786, "filename": "/PV1.VAL"}, {"start": 346786, "audio": 0, "end": 347574, "filename": "/RAINB2B.GIN"}, {"start": 347574, "audio": 0, "end": 348362, "filename": "/RAINB2BR.GIN"}, {"start": 348362, "audio": 0, "end": 349150, "filename": "/RAINB2CR.GIN"}, {"start": 349150, "audio": 0, "end": 349938, "filename": "/RAINB2GR.GIN"}, {"start": 349938, "audio": 0, "end": 350726, "filename": "/RAINB2R.GIN"}, {"start": 350726, "audio": 0, "end": 351514, "filename": "/RAINB2YR.GIN"}, {"start": 351514, "audio": 0, "end": 352302, "filename": "/RAINBB.GIN"}, {"start": 352302, "audio": 0, "end": 353090, "filename": "/RAINBC.GIN"}, {"start": 353090, "audio": 0, "end": 353878, "filename": "/RAINBG.GIN"}, {"start": 353878, "audio": 0, "end": 354666, "filename": "/RAINBGR.GIN"}, {"start": 354666, "audio": 0, "end": 355454, "filename": "/RAINBOW.GIN"}, {"start": 355454, "audio": 0, "end": 356242, "filename": "/RAINBR.GIN"}, {"start": 356242, "audio": 0, "end": 357030, "filename": "/RAINB_O.GIN"}, {"start": 357030, "audio": 0, "end": 357818, "filename": "/RANGEBAS.GIN"}, {"start": 357818, "audio": 0, "end": 358606, "filename": "/RANGESTP.GIN"}, {"start": 358606, "audio": 0, "end": 359394, "filename": "/REDO.GIN"}, {"start": 359394, "audio": 0, "end": 360182, "filename": "/REDPURP.GIN"}, {"start": 360182, "audio": 0, "end": 360970, "filename": "/RGBW.GIN"}, {"start": 360970, "audio": 0, "end": 361758, "filename": "/RMYW.GIN"}, {"start": 361758, "audio": 0, "end": 362546, "filename": "/RR.GIN"}, {"start": 362546, "audio": 0, "end": 363334, "filename": "/SEPIA.GIN"}, {"start": 363334, "audio": 0, "end": 364122, "filename": "/SPECT.GIN"}, {"start": 364122, "audio": 0, "end": 367365, "filename": "/SVGA256.BGI"}, {"start": 367365, "audio": 0, "end": 373342, "filename": "/SYSTEM.VAL"}, {"start": 373342, "audio": 0, "end": 374281, "filename": "/TAV_7178.VAL"}, {"start": 374281, "audio": 0, "end": 375061, "filename": "/ZOOM.VAL"}], "remote_package_size": 375061, "package_uuid": "6c0ef866-9633-444d-81e2-55ab84e46191"});
+
+})();
+    
+    var url = new URL(url_string);
+    var a = url.searchParams.get("type");
+    var fType = a == null ? 'JuliaC' : a;
+
+Module['arguments'] = [ fType+".bat" ];
+</script>

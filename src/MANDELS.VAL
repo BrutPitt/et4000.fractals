@@ -1,0 +1,21 @@
+;Type                          Mandel
+
+Xmin                          -8
+Xmax                          8
+Ymin                          -6
+Ymax                          6
+RealCost                      0
+ImagCost                      0
+KostanteRe                    1
+KostanteIm                    1
+Epsilon                       .07
+Bailout                       64
+ConvergenzaSu                 I                              R per Real,I per Imaginary,RI per Real & Imaginary
+N.Iterazioni                  150
+Ris.Video                     320
+Interpolazione                2
+Palette                       rainbow.gin
+SavePicture                   Mandel                         Nessuna estenzione!!!!!
+
+End
+

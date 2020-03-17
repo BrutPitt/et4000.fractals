@@ -1,0 +1,22 @@
+;---------------------------------------------------------------------------
+
+;Type                          Popcorn
+
+Xmin                          -3
+Xmax                          3
+Ymin                          -2.2
+Ymax                          2.2
+RealCost                      0
+ImagCost                      0
+KostanteRe                    .05
+KostanteIm                    .05
+Epsilon                       0                              Epsilon * Iterazioni = colore
+Bailout                       4
+ConvergenzaSu                 RI                             R per Real,I per Imaginary,RI per Real & Imaginary
+Ris.Video                     320
+N.Iterazioni                  200
+Palette                       rainbow.gin
+Savepicture                   Popcorn                        Nessuna estenzione!!!!!
+
+End
+

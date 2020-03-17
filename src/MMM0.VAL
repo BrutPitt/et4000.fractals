@@ -1,0 +1,27 @@
+
+;B387.exe by Michele Morrone.
+
+;nType     Barnsley329
+
+
+Xmin                          0.628340073464215054
+Xmax                          0.628345787454367977
+Ymin                          0.528408074385627646
+Ymax                          0.528413890430168065
+RealCost                      0.000000000000000000
+ImagCost                      0.000000000000000000
+KostanteRe                    1.000000000000000000
+KostanteIm                    1.000000000000000000
+Epsilon                       0.001000000000000000
+Bailout                       64
+Interpolazione                1
+Aval                          0.000000000000000000
+Bval                          0.000000000000000000
+Cval                          0.000000000000000000
+N.Iterazioni                  256
+ConvergenzaSu                 i
+Ris.Video                     1024
+Palette                       RAINBR.GIN
+SavePicture                   Julia
+
+End

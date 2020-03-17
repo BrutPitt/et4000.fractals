@@ -1,0 +1,27 @@
+
+;B387.exe by Michele Morrone.
+
+;nType     Hopalong
+
+
+Xmin                          -1049.960377556102460000
+Xmax                          1117.840477393815490000
+Ymin                          -1596.911393863471400000
+Ymax                          570.889461086440178000
+RealCost                      0.000000000000000000
+ImagCost                      0.000000000000000000
+KostanteRe                    1.000000000000000000
+KostanteIm                    1.000000000000000000
+Epsilon                       0.010000000000000000
+Bailout                       4
+Interpolazione                1
+Aval                          -1000.000000000000000000
+Bval                          0.000001000000000000
+Cval                          -10.000000000000000000
+N.Iterazioni                  0
+ConvergenzaSu                 
+Ris.Video                     640
+Palette                       asteria.gin
+SavePicture                   Hopalong
+
+End

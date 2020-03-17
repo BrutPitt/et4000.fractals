@@ -1,0 +1,24 @@
+
+;B387.exe by Michele Morrone.
+
+;nType     Mandel
+
+
+Xmin                          -1.253536340350219540
+Xmax                          -1.253536340317138230
+Ymin                          -0.343807856914486120
+Ymax                          -0.343807856879709106
+RealCost                      0.000000000000000000
+ImagCost                      0.000000000000000000
+KostanteRe                    1.000000000000000000
+KostanteIm                    1.000000000000000000
+Epsilon                       0.069999999999999965
+Bailout                       4
+Interpolazione                1
+N.Iterazioni                  1023
+ConvergenzaSu                 RI
+Ris.Video                     320
+Palette                       RAINBOW.GIN
+SavePicture                   Man
+
+End

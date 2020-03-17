@@ -1,0 +1,20 @@
+;Type                          Julia
+
+Xmin                          -1.5
+Xmax                          1.5
+Ymin                          -1.5
+Ymax                          1.5
+RealCost                      0
+ImagCost                      0
+KostanteRe                    2.9645
+KostanteIm                    0
+Epsilon                       .001
+Bailout                       64
+ConvergenzaSu                 i                              R per Real,I per Imaginary,RI per Real & Imaginary
+N.Iterazioni                  150
+Ris.Video                     1024
+Interpolazione                1
+Palette                       rainbow.gin
+Savepicture                   Julia                          Nessuna estenzione e max 5 char!!!!!
+
+End

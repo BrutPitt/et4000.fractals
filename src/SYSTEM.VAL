@@ -1,0 +1,229 @@
+;       VALORI INIZIALI
+;
+; Il ';' identifica il commento.
+; La lunghezza del Campo Variabili e' 30 caratteri.
+; La lunghezza del Campo Valori e' 30 caratteri.
+; Le Variabili &/o le direttive devono iniziare all'offset 0 della riga.
+;
+; Ogni tipo di frattale e' iniziato dalla variabile TYPE  seguita dal nome
+; del frattale,e conclusa con la direttiva END.
+; Il File System.387 deve terminare con la parola chiave ENDALL.
+;
+;---------------------------------------------------------------------------------------------
+;Campo Variabili & Direttive | Campo Valori                | Campo Commento anche senza ';'
+;---------------------------------------------------------------------------------------------
+Type                          System
+
+Editor                        C:\utility\bed.com
+
+End
+
+;--------------------------------------------------------------------------
+
+Type                          Mandel
+
+DataFile                      Mandel.val
+SaveFile                      Ma
+
+End
+
+;--------------------------------------------------------------------------
+
+Type                          MandelSin
+
+DataFile                      MandelS.val
+SaveFile                      MaS
+
+End
+;--------------------------------------------------------------------------
+
+Type                          MandelCos
+
+DataFile                      MandelC.val
+SaveFile                      MaC
+
+End
+;--------------------------------------------------------------------------
+
+Type                          MandelExp
+
+DataFile                      MandelE.val
+SaveFile                      MaE
+
+End
+
+;--------------------------------------------------------------------------
+
+Type                          MandelEps
+
+DataFile                      MandelEp.val
+SaveFile                      MaEps
+
+End
+
+;--------------------------------------------------------------------------
+
+
+Type                          Julia
+
+DataFile                      Julia.val
+SaveFile                      Ju
+
+End
+
+;--------------------------------------------------------------------------
+
+Type                          JuliaSin
+
+DataFile                      JuliaS.val
+SaveFile                      JuS
+
+End
+;--------------------------------------------------------------------------
+
+Type                          JuliaCos
+
+DataFile                      JuliaC.val
+SaveFile                      JuC
+
+End
+;--------------------------------------------------------------------------
+
+Type                          JuliaExp
+
+DataFile                      JuliaE.val
+SaveFile                      JuE
+
+End
+
+;--------------------------------------------------------------------------
+
+Type                          JuliaEps
+
+DataFile                      JuliaEp.val
+SaveFile                      JuEps
+
+End
+
+;--------------------------------------------------------------------------
+
+
+Type                          Biomorph
+
+DataFile                      Biomorph.val
+SaveFile                      Biom
+
+End
+
+;--------------------------------------------------------------------------
+;  Alcuni valori interessanti. . .
+;
+;  A = 3.14     B = .3    C = .3     Zoom = .1
+;    = 76         = 27      = 888         = .1
+;    = 32         = 19      = 900
+;    = 64         = 3       = 70
+;    = 48         = 2.7     = 80
+;    = 68         = 18      = 3210
+;    = -200       = .1      = -80
+;    = -1000      = .1      = 10
+
+
+Type                          Hopalong
+
+DataFile                      Hopalong.val
+SaveFile                      Hopx
+
+End
+
+;---------------------------------------------------------------------------
+Type                          HopSin
+
+DataFile                      HopSin.val
+SaveFile                      Hops
+
+End
+
+;---------------------------------------------------------------------------
+Type                          Henon
+
+DataFile                      Henon.val
+SaveFile                      Henon
+
+End
+
+;---------------------------------------------------------------------------
+Type                          Martin
+
+DataFile                      Martin.val
+SaveFile                      Mart
+
+End
+
+
+;---------------------------------------------------------------------------
+Type                          HopSqrt
+
+DataFile                      HopSqrt.val
+SaveFile                      Hopsq
+
+End
+
+;---------------------------------------------------------------------------
+Type                          HopCos
+
+DataFile                      HopCos.val
+SaveFile                      Hopc
+
+End
+
+;---------------------------------------------------------------------------
+Type                          HopSinCos
+
+DataFile                      HopSiCo.val
+SaveFile                      Hopsc
+
+End
+
+;---------------------------------------------------------------------------
+Type                          Popcorn
+
+DataFile                      popcorn.val
+SaveFile                      popc
+
+End
+
+;---------------------------------------------------------------------------
+Type                          Sierpinski
+
+DataFile                      sierp.val
+SaveFile                      si
+
+End
+
+;---------------------------------------------------------------------------
+Type                          Barnsley329
+
+DataFile                      barnsley.val
+SaveFile                      bar
+
+End
+
+
+;---------------------------------------------------------------------------
+;  Alcuni valori interessanti. . .
+;
+;  A = 1        B = .7      Zoom = 8
+;    = 1          = .4           = 2
+;    = 1          = -.93         = .5
+;    = 1          = -.92         = .8
+;    = 1          = -.8          = 1.3
+
+Type                          Plankton
+
+DataFile                      Plankton.val
+SaveFile                      Plank
+
+End
+
+
+EndAll
