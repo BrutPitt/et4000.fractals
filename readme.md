@@ -6,7 +6,7 @@ This is a my old project, at the time of university, that uses low level program
 It can be built with **Turbo C++ 2.0**, or **Borland C++ 3.x** (anyway it's a **C** project for DOS), need also **Turbo Assembler**, present in both package.
 (Unfortunately I used a free but "close" library, as GUI: open source was not widespread.)
 
-**Is required also a VM with et4000 ROM emulator if you want use resolution above the "standard" 320x200@256 colors.*
+**Is required also a VM with et4000 ROM emulator (like PCem / DosBox) if you want use resolution above the VGA/MCGA standard (320x200@256 colors)*
 
 I published it, mostly for the technique used to speed up the rendering, used also in Fractint, that calculate the boundary of areas with same exit values, and when the area is closed, it fill with color, without compute the singular internal pixel.
 
