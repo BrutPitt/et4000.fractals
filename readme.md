@@ -15,18 +15,24 @@ today, with current power of calculus, CPU and mostly GPU, there is no more nece
 I have used [em-DosBox](https://github.com/dreamlayers/em-dosbox), Emscripten port of DosBox, to make available a LIVE example via WebAssembly.
 Is required a web-browser with webAssembly capability: currently only FireFox and Chromium-based (Chrome, Opera, new MS Edge, etc) are supported.
 
-| DualPass rendering: Z-buffer surface reconstruction | DualPass + Ambient Occlusion |
+
+| Mandel Rendering | Mandel Complete |
 | :---: | :---: |
-| [ ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractal/master/Mandel1.jpg)] ](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=Mandel) | [![](https://raw.githubusercontent.com/BrutPitt/et4000.fractal/master/Mandel2.jpg)] (https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=Mandel) |
-| **DualPass + AO + Shadows** | **DualPass + AO + Shadows + mixed AlphaBlending** |
-| ![](https://raw.githubusercontent.com/BrutPitt/glChAoS.P/master/screenShots/sShot_2019818_55342.jpg) | ![](https://raw.githubusercontent.com/BrutPitt/glChAoS.P/master/screenShots/sShot_2019818_55450.jpg)|
+| ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/Mandel1.jpg) | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/Mandel2.jpg) |
+- [Launch DOS emulator with **Mandelbrot**](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=Mandel)
 
 
-[**Mandelbrot**](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=Mandel)
+| **JuliaCos Rendering** | **JuliaCos Complete** |
+| :---: | :---: |
+| ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/JCos1.jpg) | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/JCos2.jpg)|
 
-[**JuliaCos**](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=JuliaC)
+
+
+- [Launch DOS emulator with **JuliaCos**](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=JuliaC)
 
 Currently I preferred "stretch" the DosBox screen to entire canvas (but it don't maintains the 1024x768 / 4:3 proportion)... In future I'll provide also for fixed internal canvas.
+
+### Keys/MouseButtons used
 
 ```
 - F1/h/H  Help (in the program is in Italian)
