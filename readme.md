@@ -20,14 +20,14 @@ Is required a web-browser with webAssembly capability: currently only FireFox an
 
 ## [LIVE ==> et4000.fractals Mandelbrot](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=Mandel)
 
-| Mandel Rendering | Mandel Complete |
+| contour rendering | Mandel complete |
 | :---: | :---: |
 | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/Mandel1.jpg) | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/Mandel2.jpg) |
 
 
 ## [LIVE ==> et4000.fractals JuliaCos](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=JuliaC)
 
-| **JuliaCos Rendering** | **JuliaCos Complete** |
+| contour rendering | JuliaCos complete |
 | :---: | :---: |
 | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/JCos1.jpg) | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/JCos2.jpg)|
 
@@ -39,7 +39,8 @@ Currently I preferred "stretch" the DosBox screen to entire canvas (but it don't
 
 ```
 - F1/h/H  Help (in the program is in Italian)
-- {1..8}  interpolation points (1=No interpolation)
+- SPACE   toggle regular renedeing / contour rendering (only in Mandel & Julia)
+- {1..8}  interpolation # points (1=No interpolation, available in regular rendering)
 - F5      320x200x256  mode  Vga & Mcga
 - F6      640x480x256  mode  Tseng3000 or Tseng4000 mode
 - F7      800x600x256  mode  Tseng3000 or Tseng4000 & Multi-sync mode
