@@ -38,34 +38,35 @@ Currently I preferred "stretch" the DosBox screen to entire canvas (but it don't
 ### Keys/MouseButtons used
 
 ```
-- F1/h/H  Help (in the program is in Italian)
-- SPACE   toggle regular renedeing / contour rendering (only in Mandel & Julia)
-- {1..8}  interpolation # points (1=No interpolation, available in regular rendering)
-- F5      320x200x256  mode  Vga & Mcga
-- F6      640x480x256  mode  Tseng3000 or Tseng4000 mode
-- F7      800x600x256  mode  Tseng3000 or Tseng4000 & Multi-sync mode
-- F8      1024x768x256 mode  Tseng4000 1Mb & Multi-sync mode
-- Tab     Parameters List 
-- L       Start change palette, any key rotate between present palettes.
--         Esc to select and return to fractal
-- S       Save file (gif) ***doesn't not work in LIVE demo!***
-- F10     View current palette
--         Any key to return to fractal
-- Enter   go to Zoom mode... after use:
--            Mouse:
--              Right Button: resize box area
--              Left  Button: starts calculating the selected area 
--            Keyboard :");
--              PgUp/PgDn: resize box area
--              +/-      : tuning resizing step
--              Arrows   : move box
-- C       Change exploration parameters (may not work) 
--            Enter/Arrows: validate values
--            Esc/CTRL-C  : abort
--            PgUp/PgDn   : Confirm values and exit
-- +       Adds 8 to iterations number
-- -       Subs 8 to iterations number
-- W	      Write actual parameter to file ***doesn't not work in LIVE demo!***
-- Esc     Return to menu
+ F1/h/H  Help (in the program is in Italian)
+ SPACE   toggle regular renedeing / contour rendering (only in Mandel & Julia)
+ {1..8}  interpolation # points (1=No interpolation, available in regular rendering)
+ F5      320x200x256  mode  Vga & Mcga
+ F6      640x480x256  mode  Tseng3000 or Tseng4000 mode
+ F7      800x600x256  mode  Tseng3000 or Tseng4000 & Multi-sync mode
+ F8      1024x768x256 mode  Tseng4000 1Mb & Multi-sync mode
+ Tab     Parameters List 
+ L       Start change palette, any key rotate between present palettes.
+         Esc to select and return to fractal
+ S       Save file (gif) ***doesn't not work in LIVE demo!***
+ F10     View current palette
+         Any key to return to fractal
+ Enter   go to Zoom mode... after use:
+        -  Mouse:
+              Right Button: resize box area
+              Left  Button: starts calculating the selected area 
+              Move NO buttons: move box area
+        -  Keyboard :");
+              PgUp/PgDn: resize box area
+              +/-      : tuning resizing step
+              Arrows   : move box
+ C       Change exploration parameters (may not work) 
+            - Enter/Arrows: validate values
+            - Esc/CTRL-C  : abort
+            - PgUp/PgDn   : Confirm values and exit
+ +       Adds 8 to iterations number
+ -       Subs 8 to iterations number
+ W       Write actual parameter to file ***doesn't not work in LIVE demo!***
+ Esc     Return to menu
 ```
 
