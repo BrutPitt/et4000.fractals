@@ -3,32 +3,35 @@ For the new generation, **et4000** was a popular VGA video card from the early 9
 
 This is a my old project, at the time of university, that uses low level programming (ASM) to access to video memory, and FPU 387 (32 bit floating point, math coprocessor: optional in the PCs of that time).
 
-It can be built with **Turbo C++ 2.0**, or **Borland C++ 3.x** (anyway it's a **C** project), need also **Turbo Assembler**, present in both package.
-(Unfortunately I used a free but "close" library, as GUI: open source was not widespread.
+It can be built with **Turbo C++ 2.0**, or **Borland C++ 3.x** (anyway it's a **C** project for DOS), need also **Turbo Assembler**, present in both package.
+(Unfortunately I used a free but "close" library, as GUI: open source was not widespread.)
+
+**Is required also a VM with et4000 ROM emulator if you want use resolution above the "standard" 320x200@256 colors.*
 
 I published it, mostly for the technique used to speed up the rendering, used also in Fractint, that calculate the boundary of areas with same exit values, and when the area is closed, it fill with color, without compute the singular internal pixel.
 
 It's extremely advantageous and spectacular to see with the internal "lake" of Mandelbrot.
-(the compute is relatively slow, also to appreciate the render technique... and also because is an emulator of 386/387 ;) )
-today, with current power of calculus, CPU and mostly GPU, there is no more necessity to use techniques like this... but in those days it took minutes, not seconds.
+(the compute is "relatively slow", also to appreciate the render technique... and also because is an emulator of 386/387 ;) )
+Today, with current power of calculus, of CPU and mostly GPU, there is no more necessity to use techniques like this... but in those days it took minutes, not seconds, to complete to draw.
 
-I have used [em-DosBox](https://github.com/dreamlayers/em-dosbox), Emscripten port of DosBox, to make available a LIVE example via WebAssembly.
+I have used [**em-DosBox**](https://github.com/dreamlayers/em-dosbox), Emscripten port of DosBox, to make available a LIVE example via WebAssembly.
 Is required a web-browser with webAssembly capability: currently only FireFox and Chromium-based (Chrome, Opera, new MS Edge, etc) are supported.
 
+
+## [LIVE ==> et4000.fractals Mandelbrot](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=Mandel)
 
 | Mandel Rendering | Mandel Complete |
 | :---: | :---: |
 | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/Mandel1.jpg) | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/Mandel2.jpg) |
-- [Launch DOS emulator with **Mandelbrot**](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=Mandel)
 
+
+## [LIVE ==> et4000.fractals JuliaCos](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=JuliaC)
 
 | **JuliaCos Rendering** | **JuliaCos Complete** |
 | :---: | :---: |
 | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/JCos1.jpg) | ![](https://raw.githubusercontent.com/BrutPitt/et4000.fractals/master/JCos2.jpg)|
 
 
-
-- [Launch DOS emulator with **JuliaCos**](https://brutpitt.github.io/et4000.fractals/em-dosbox/b387.html?type=JuliaC)
 
 Currently I preferred "stretch" the DosBox screen to entire canvas (but it don't maintains the 1024x768 / 4:3 proportion)... In future I'll provide also for fixed internal canvas.
 
