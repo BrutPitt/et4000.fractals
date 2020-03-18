@@ -1,18 +1,18 @@
 # et4000.fractals
-For the new generation, **et4000** was a popular VGA video card from the early 90's (late 80's) with 512KB/1MB of memory and resolution until 1024x768 with 256 colors (via LUT table)
+For the new generation, **et4000** was a popular VGA video card from the early 90's (late 80's) with 512KB/1MB of onboard memory and resolution until 1024x768 with 256 colors (via LUT table)
 
-This is a my old project, at the time of university, that uses low level programming (ASM) to access to video memory, and FPU 387 (32 bit floating point, math coprocessor: optional in the PCs of that time).
+This is a my old project ('90/'91), at the time of university, that uses low level programming (ASM) to access to video memory, and FPU 387 (32 bit floating point, math coprocessor: optional in the PCs of that time).
 
 It can be built with **Turbo C++ 2.0**, or **Borland C++ 3.x** (anyway it's a **C** project for DOS), need also **Turbo Assembler**, present in both package.
-(Unfortunately I used a free but "close" library, as GUI: open source was not widespread.)
+(Unfortunately I used a free, but "close" library, as GUI. It's attached, but there are not sources: open source was not widespread.)
 
-**Is required also a VM with et4000 ROM emulator (like PCem / DosBox) if you want use resolution above the VGA/MCGA standard (320x200@256 colors)*
+**To use in your personal VM is required also a VM with et4000 ROM emulator (like PCem / DosBox) if you want use resolution above the VGA/MCGA standard (320x200@256 colors)*
 
-I published it, mostly for the technique used to speed up the rendering, used also in Fractint, that calculate the boundary of areas with same exit values, and when the area is closed, it fill with color, without compute the singular internal pixel.
+I published it, mostly for the technique used to speed up the rendering, used also in Fractint, that calculate the boundary of areas with same exit values, and when the area is closed the algorithm fill it with color, without compute the singular internal pixel.
 
 It's extremely advantageous and spectacular to see with the internal "lake" of Mandelbrot.
-(the compute is "relatively slow", also to appreciate the render technique... and also because is an emulator of 386/387 ;) )
-Today, with current power of calculus, of CPU and mostly GPU, there is no more necessity to use techniques like this... but in those days it took minutes, not seconds, to complete to draw.
+(the compute is "relatively slow", also to appreciate the render technique... and also because run in an emulator of 386/387 ;) )
+Today, with current power of calculus and parallelism of CPU, and mostly GPU, there is no more necessity to use techniques like this... but in those days processing took minutes, not seconds, to complete to draw.
 
 I have used [**em-DosBox**](https://github.com/dreamlayers/em-dosbox), Emscripten port of DosBox, to make available a LIVE example via WebAssembly.
 Is required a web-browser with webAssembly capability: currently only FireFox and Chromium-based (Chrome, Opera, new MS Edge, etc) are supported.
@@ -33,7 +33,9 @@ Is required a web-browser with webAssembly capability: currently only FireFox an
 
 
 
-Currently I preferred "stretch" the DosBox screen to entire canvas (but it don't maintains the 1024x768 / 4:3 proportion)... In future I'll provide also for fixed internal canvas.
+Currently I preferred "stretch" the DosBox screen to entire canvas (but it don't maintains the 1024x768 / 4:3 proportion)... In future I'll provide also a fixed un-stretchable canvas.
+
+Can be explored also other fractal types: below the keys/buttons used inside the program.
 
 ### Keys/MouseButtons used
 
@@ -70,3 +72,4 @@ Currently I preferred "stretch" the DosBox screen to entire canvas (but it don't
  Esc     Return to menu
 ```
 
+**It was a personal program, never published, has just "a few" known bugs... from me ;)*
