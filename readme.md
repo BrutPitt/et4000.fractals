@@ -10,6 +10,8 @@ It can be built with **Turbo C++ 2.0**, or **Borland C++ 3.x** (anyway it's a **
 
 I published it, mostly for the technique used to speed up the rendering, used also in Fractint, that calculate the boundary of areas with same exit values, and when the area is closed the algorithm fill it with color, without compute the singular internal pixel.
 
+**You can switch between **contour rendering** and **traditional rendering** by **SPACE** key*
+
 It's extremely advantageous and spectacular to see with the internal "lake" of Mandelbrot.
 (the compute is "relatively slow", also to appreciate the render technique... and also because run in an emulator of 386/387 ;) )
 Today, with current power of calculus and parallelism of CPU, and mostly GPU, there is no more necessity to use techniques like this... but in those days processing took minutes, not seconds, to complete to draw.
