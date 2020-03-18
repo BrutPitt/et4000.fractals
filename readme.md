@@ -4,7 +4,7 @@ For the new generation, **et4000** was a popular VGA video card from the early 9
 This is a my old project ('90/'91), at the time of university, that uses low level programming (ASM) to access to video memory, and FPU 387 (32 bit floating point, math coprocessor: optional in the PCs of that time).
 
 It can be built with **Turbo C++ 2.0**, or **Borland C++ 3.x** (anyway it's a **C** project for DOS), need also **Turbo Assembler**, present in both package.
-(Unfortunately I used a free, but "close" library, as GUI. It's attached, but there are not sources: open source was not widespread.)
+(Unfortunately I used a free, but "closed" library, as GUI. It's attached, but there are not sources: open source was not widespread.)
 
 **To use in your personal VM is required also a VM with et4000 ROM emulator (like PCem / DosBox) if you want use resolution above the VGA/MCGA standard (320x200@256 colors)*
 
